@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>组件抽象 on 题歌</title>
+    <link>http://fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/index.xml</link>
+    <description>Recent content in 组件抽象 on 题歌</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>前端业务模型组件抽象集成实践</title>
+      <link>http://fanxmistic.github.io/post/components/</link>
+      <pubDate>Tue, 14 Mar 2017 17:11:31 +0800</pubDate>
+      
+      <guid>http://fanxmistic.github.io/post/components/</guid>
+      <description>
+
+&lt;div
+    style=&#34;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 400px;
+    &#34;
+    data-src=&#34;/images/components/header.png&#34;
+    class=&#34;blured-image w3-card-8 filter-blur-15&#34;
+&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;在组件化开发的基础上，对营运后端占业务总量50%以上的检索页面模型进行抽象，集成了检索模型组件，通过配置生成最终页面，减少了重复劳动，提高了组件复用，同时也提高了开发效率。本文详细介绍模型组件的使用，设计原则和实现方案及后续即将集成的表单模型组件，最终彻底去除重复劳动。&lt;/p&gt;
+
+&lt;p&gt;2016年 github 上星最多的 10 个开源项目中，第5名是 React，第6名是 angular.js，这两个都是前端最热的组件化解决方案之一，组件化已经是大势所趋。新品类也紧跟技术大潮步伐，在运营后端和用户端上都使用组件化思想开发。在运营后端上，在组件化方案之前，运营后端绝大部分是用基于 FIS 的解决方案，开发中需要自己编写组件，现在得益于 React 和 React 丰富的组件生态，开源的 React 组件库 antd 基本上能满足我们所有业务开发，组件化解决方案已经展现出他极大优越性，在开发效率上有极大的提升，bug 数也明显下降。组件化带来了生产力的提升&lt;/p&gt;
+
+&lt;p&gt;就像蒸汽机的发明替代了手工劳动，使人们感到幸福，电气时代替代蒸汽机，使人们得到享受，而人工智能时代用机器替代人类枯燥的劳动，人们变成绝对的主宰；组件化使前端进入电气时代，下一个时代就是用智能去除枯燥重复的劳动。而当前我们在运营后端的开发上确实存在重复劳动。&lt;/p&gt;
+
+&lt;p&gt;以几个业务系统为例，以下是我们商超运营后端，生态链仓储和电销系统的界面截图。&lt;/p&gt;
+
+&lt;!--![商超](/images/components/shop.png)
+
+![生态链](/images/components/ecochain.png)
+
+![电销](/images/components/dianxiao.png)--&gt;
+
+&lt;p&gt;可以看到运营后台系统的界面还是很有规律的，其实MIS系统绝大部分界面也就是增删改查。从现在的几个业务来看，增删改查的需求，类似图上的界面保守的说能占到50%。而现在我们还在重复的写着这些页面，重复着代码复制，修改这样的工作。&lt;/p&gt;
+
+&lt;p&gt;分析系统特征，将通用部分，抽象建模进行集成，工厂式量产替代小手工生产，提高人效，是我们一直要追求的目标。基于现在的组件化方案，集成规模更大的组件，通过配置满足不同的需求，也是可行的。所以设计实现了这样的一个业务组件模型。&lt;/p&gt;
+
+&lt;h3 id=&#34;业务模型组件分析&#34;&gt;业务模型组件分析&lt;/h3&gt;
+
+&lt;p&gt;页面基本上回包含检索区，操作按钮区，数据表格区，分页区。每一个页面请求不同的服务。检索，分页用户操作都是一样的，可以通用处理。不同的是检索区，操作事件，表格的每一列肯定是不一样的，用户能自行进行配置。还有一个不一样的是请求的服务，需要指定使用的服务地址。&lt;/p&gt;
+
+&lt;h3 id=&#34;业务模型组件设计原则&#34;&gt;业务模型组件设计原则&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;约定大于配置。通过一些强制约定简化配置。&lt;/li&gt;
+&lt;li&gt;保持配置项简单、一致。这一点很重要，保持简单，使用时就不用参照手册，利于使用和推广，但是配置简单势必会牺牲一下灵活性，我最终还是选择了易用性优先，兼顾一部分的灵活性配置。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;业务模型组件流程图&#34;&gt;业务模型组件流程图&lt;/h3&gt;
+
+&lt;!--![流程图](/images/components/progress.png)--&gt;
+
+&lt;p&gt;通过配置过滤项生成页面，通过服务配置指定数据获取方式。使用了业务模型组件之后，只处理自组件的用户交互事件，页面上其他事情就不用管了，比如检索按钮，清空按钮，翻页处理等都由大组件集中处理了。&lt;/p&gt;
+
+&lt;h3 id=&#34;业务模型组件实现&#34;&gt;业务模型组件实现&lt;/h3&gt;
+
+&lt;p&gt;我使用 Vue 作为基础库，实现了这个模型，最终代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;lt;xp-searchPage ref=&amp;quot;sp&amp;quot; change={this.filterChange}&amp;gt;
+  &amp;lt;xp-filter components={filterComponents}&amp;gt;&amp;lt;/xp-filter&amp;gt;
+  &amp;lt;xp-buttonBar components={buttonComponents}&amp;gt;&amp;lt;/xp-buttonBar&amp;gt;
+  &amp;lt;xp-table components={tableComponents}&amp;gt;&amp;lt;/xp-table&amp;gt;
+&amp;lt;/xp-searchPage&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;1-组件使用配置&#34;&gt;1.组件使用配置&lt;/h4&gt;
+
+&lt;p&gt;过滤项的配置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const filterComponents = [
+  {
+    component: &#39;Input&#39;,
+    label: &#39;手机号&#39;,
+    name: &#39;shop_phone&#39;,
+    value: utils.getQueryString(&#39;phoneNumber&#39;)
+  },
+  {
+    component: &#39;MerchantStatus&#39;,
+    label: &#39;商户状态&#39;,
+    name: &#39;shop_status&#39;
+  },
+  .
+  .
+  .
+  {
+    component: &#39;Button&#39;,
+    label: &#39;查询&#39;,
+    name: &#39;submit&#39;,
+  },
+  {
+    component: &#39;Reset&#39;,
+    label: &#39;重置&#39;,
+    name: &#39;reset&#39;
+  }
+];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;过滤项配置规范：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;配置项&lt;/th&gt;
+&lt;th&gt;参数类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;component&lt;/td&gt;
+&lt;td&gt;String Object （VUE组件）&lt;/td&gt;
+&lt;td&gt;组件，可以是字符串或者对象；字符串时会动态加载系统提供的组件；对象时直接使用该自定制的组件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;label&lt;/td&gt;
+&lt;td&gt;过滤项名称&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;提交时该项的字段名称&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;默认值&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;表格项的配置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const tableComponents = [
+  {
+    component: &#39;Text&#39;,
+    label: &#39;序号&#39;,
+    name: &#39;no&#39;,
+    width: 40
+  },
+  {
+    component: &#39;Input&#39;,
+    label: &#39;项目编号&#39;,
+    name: &#39;task_no&#39;,
+    width: 120,
+    action: this.updateNo
+  },
+  .
+  .
+  .
+  {
+    component: &#39;Command&#39;,
+    label: &#39;操作&#39;,
+    name: [&#39;分配&#39;, &#39;废弃&#39;],
+    action: [this.dispatch, this.drop],
+    width: 100
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;表格列配置规范：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;配置项&lt;/th&gt;
+&lt;th&gt;参数类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;component&lt;/td&gt;
+&lt;td&gt;String Object （VUE组件）&lt;/td&gt;
+&lt;td&gt;组件，可以是字符串或者对象；字符串时会动态加载系统提供的组件；对象时直接使用该自定制的组件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;label&lt;/td&gt;
+&lt;td&gt;过滤项名称&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;提交时该项的字段名称&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;width&lt;/td&gt;
+&lt;td&gt;表格列宽度&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;action&lt;/td&gt;
+&lt;td&gt;单元格事件&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;服务配置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;filterChange(params, source) {
+  console.log(&#39;source:&#39;, source);
+  if (source == &#39;button&#39; || source == &#39;pagination&#39;) {
+    let pass = true;
+    if (params[&#39;shop_phone&#39;] &amp;amp;&amp;amp; !/^1\d{10}$/.test(params[&#39;shop_phone&#39;])) {
+      pass = false;
+      this.$alert(&#39;请输入正确的手机号&#39;);
+      pass = false;
+    }
+    if (!pass) return;
+    return api.getTaskPollList(params);
+  }
+},
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;filterChange 需要返回 ajax 请求的 Promise 对象, 在 filterChange 中可以进行校验。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-组件交互图&#34;&gt;2.组件交互图&lt;/h4&gt;
+
+&lt;!--![交互图](/images/components/interaction.png)--&gt;
+
+&lt;p&gt;父组件 xp-searchPage 负责主要的处理逻辑，子组件通过事件与父组件进行交互，父组件将最终数据通过事件通知给 table 组件，最终完成数据的渲染。&lt;/p&gt;
+
+&lt;h4 id=&#34;3-子组件动态加载及渲染&#34;&gt;3.子组件动态加载及渲染&lt;/h4&gt;
+
+&lt;p&gt;如果配置的是系统子组件，即 component 为 string 时，需要动态加载该子组件并动态渲染，首先拼出子组件的路径，通过 require 加载，我使用的是 Vue2.0，用 jsx 方式编写组件，利用 render 方法的参数 createElement 动态创建该组件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;render(h) {
+  return (
+    &amp;lt;div class=&#39;compo-filter&#39;&amp;gt;
+      &amp;lt;el-form ref=&amp;quot;form&amp;quot; inline={true}&amp;gt;
+        &amp;lt;div class=&amp;quot;filter-area&amp;quot;&amp;gt;
+          {
+            this.componentsData.map((item, index) =&amp;gt; {
+              return h(item.tag, {props: {...item}}, this.$slots.default);
+            })
+          }
+        &amp;lt;/div&amp;gt;
+      &amp;lt;/el-form&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;子组件规范&#34;&gt;子组件规范&lt;/h3&gt;
+
+&lt;p&gt;有了框架，我们需要具体实现业务的子组件，只要按照以下规范，所有的组件都能被配置为过滤项或者表格列组件，具体规范如下：&lt;/p&gt;
+
+&lt;h4 id=&#34;1-filter-子组件&#34;&gt;1.filter 子组件&lt;/h4&gt;
+
+&lt;p&gt;filter 组件 props 规范:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;required&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;lable&lt;/td&gt;
+&lt;td&gt;Stirng&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;标签&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;提交数据名称&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;reset&lt;/td&gt;
+&lt;td&gt;Function&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;清空操作，让组件清楚用户操作，处于初始状态&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Any&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;默认值&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;valueChange&lt;/td&gt;
+&lt;td&gt;Function&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;将值传递给父组件；this.valueChange(this.name, this.statusModel)；第一个参数：该项ajax请求的key；第二个参数：key对应的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;当过滤项值发生变化时，调用 valueChange，valueChange 可以调用多次，不同的 key 会产生不同的参数，例如，三级联动的省市区选择列表，可以调用三次&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;this.valueChange(&#39;shop_province_id&#39;, item_id);
+this.valueChange(&#39;shop_city_id&#39;, item_id);
+this.valueChange(&#39;shop_town_id&#39;, item_id);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;系统在加载组件时会自动注入并处理 valueChange，使子组件能和 filter 进行交互，当过滤区清空按钮点击时，调用 reset 实现组件重新初始化。&lt;/p&gt;
+
+&lt;h4 id=&#34;2-table子组件&#34;&gt;2.table子组件&lt;/h4&gt;
+
+&lt;p&gt;talbe 列（单元格）组件props规范&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;required&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;对应表格行数据的key&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Any&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;单元格值&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;context&lt;/td&gt;
+&lt;td&gt;Object&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;整行row数据&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;action&lt;/td&gt;
+&lt;td&gt;Function&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;单元格事件回调函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;虽然只有4个配置项，但也可以灵活使用，例如系统提供的 Command 列组件，name 是一个数组，只要在编写子组件时，能正确解析属性值，name 属性可以随意传。&lt;/p&gt;
+
+&lt;p&gt;通过自定义 filter 组件和 table 组件，能实现任何个性化的定制，在电销系统中实际使用了这套模型组件系统，也很好的满足业务需求。&lt;/p&gt;
+
+&lt;h3 id=&#34;业务模型组件优点&#34;&gt;业务模型组件优点&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;减少开发工作量，让开发者专注于核心业务逻辑的开发&lt;/li&gt;
+&lt;li&gt;减少开发时间，提高生产力&lt;/li&gt;
+&lt;li&gt;子组件可以复用，随着子组件的积累，更加较少开发量&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;适用范围&#34;&gt;适用范围&lt;/h3&gt;
+
+&lt;p&gt;非常适用于运营后端检索页面及带增删改查等操作的页面。如果页面不是这个逻辑，不推荐强行使用。&lt;/p&gt;
+
+&lt;h3 id=&#34;后续规划&#34;&gt;后续规划&lt;/h3&gt;
+
+&lt;p&gt;使用这个模型，在电销系统中已经尝到甜头了，其实还有一个方面，能提高开发效率，那就是表单自动构建，通过配置，自动生成表单，模型组件和表单组件两者结合起来，绝对是运营后台开发的利器。
+表单组件的设计原则和实现方式其实和过滤组件和表格组件是一样的。
+另外，我们将会设计一个共享方案，建设一个组件共享平台，将使用这个模型的过滤组件和表格组件都能展示出来，方便复用。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
