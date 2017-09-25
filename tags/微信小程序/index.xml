@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>微信小程序 on 题歌</title>
-    <link>https://fanxmistic.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml</link>
+    <link>//fanxmistic.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml</link>
     <description>Recent content in 微信小程序 on 题歌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://fanxmistic.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//fanxmistic.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>小程序体验</title>
-      <link>https://fanxmistic.github.io/post/22222/</link>
+      <link>//fanxmistic.github.io/post/22222/</link>
       <pubDate>Mon, 13 Mar 2017 16:55:49 +0800</pubDate>
       
-      <guid>https://fanxmistic.github.io/post/22222/</guid>
+      <guid>//fanxmistic.github.io/post/22222/</guid>
       <description>
 
 &lt;div
@@ -72,7 +72,7 @@
 
 &lt;p&gt;按照小程序官方建议的代码框架，小程序的文件结构包含一个描述整体程序的 app 和多个描述各自页面的 page。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://fanxmistic.github.io/images/mini_program/jiagou.png&#34; alt=&#34;外卖小程序技术架构&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//fanxmistic.github.io/images/mini_program/jiagou.png&#34; alt=&#34;外卖小程序技术架构&#34; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -203,10 +203,10 @@
     
     <item>
       <title>小程序技术初体验</title>
-      <link>https://fanxmistic.github.io/post/mini_program/</link>
+      <link>//fanxmistic.github.io/post/mini_program/</link>
       <pubDate>Mon, 13 Mar 2017 16:55:49 +0800</pubDate>
       
-      <guid>https://fanxmistic.github.io/post/mini_program/</guid>
+      <guid>//fanxmistic.github.io/post/mini_program/</guid>
       <description>
 
 &lt;div
