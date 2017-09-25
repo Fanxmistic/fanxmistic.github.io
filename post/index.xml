@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 题歌</title>
-    <link>http://fanxmistic.github.io/post/index.xml</link>
+    <link>https://fanxmistic.github.io/post/index.xml</link>
     <description>Recent content in Posts on 题歌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Mar 2017 17:11:31 +0800</lastBuildDate>
-    <atom:link href="http://fanxmistic.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fanxmistic.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>前端业务模型组件抽象集成实践</title>
-      <link>http://fanxmistic.github.io/post/components/</link>
+      <link>https://fanxmistic.github.io/post/components/</link>
       <pubDate>Tue, 14 Mar 2017 17:11:31 +0800</pubDate>
       
-      <guid>http://fanxmistic.github.io/post/components/</guid>
+      <guid>https://fanxmistic.github.io/post/components/</guid>
       <description>
 
 &lt;div
@@ -402,10 +402,10 @@ this.valueChange(&#39;shop_town_id&#39;, item_id);
     
     <item>
       <title>小程序体验</title>
-      <link>http://fanxmistic.github.io/post/22222/</link>
+      <link>https://fanxmistic.github.io/post/22222/</link>
       <pubDate>Mon, 13 Mar 2017 16:55:49 +0800</pubDate>
       
-      <guid>http://fanxmistic.github.io/post/22222/</guid>
+      <guid>https://fanxmistic.github.io/post/22222/</guid>
       <description>
 
 &lt;div
@@ -464,7 +464,7 @@ this.valueChange(&#39;shop_town_id&#39;, item_id);
 
 &lt;p&gt;按照小程序官方建议的代码框架，小程序的文件结构包含一个描述整体程序的 app 和多个描述各自页面的 page。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://fanxmistic.github.io/images/mini_program/jiagou.png&#34; alt=&#34;外卖小程序技术架构&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://fanxmistic.github.io/images/mini_program/jiagou.png&#34; alt=&#34;外卖小程序技术架构&#34; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -595,10 +595,10 @@ this.valueChange(&#39;shop_town_id&#39;, item_id);
     
     <item>
       <title>小程序技术初体验</title>
-      <link>http://fanxmistic.github.io/post/mini_program/</link>
+      <link>https://fanxmistic.github.io/post/mini_program/</link>
       <pubDate>Mon, 13 Mar 2017 16:55:49 +0800</pubDate>
       
-      <guid>http://fanxmistic.github.io/post/mini_program/</guid>
+      <guid>https://fanxmistic.github.io/post/mini_program/</guid>
       <description>
 
 &lt;div
