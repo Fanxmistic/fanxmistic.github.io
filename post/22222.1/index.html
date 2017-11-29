@@ -7,26 +7,26 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta property="og:title" content=" 前端业务模型组件抽象集成实践 &middot;  题歌" />
+        <meta property="og:title" content=" 小程序体验 &middot;  题歌" />
         <meta property="og:site_name" content="题歌" />
-        <meta property="og:url" content="https://fanxmistic.github.io/post/components/" />
+        <meta property="og:url" content="https://fanxmistic.github.io/post/22222.1/" />
 
     
         <meta property="og:type" content="article" />
-        <meta property="og:article:published_time" content="2017-03-14T17:11:31&#43;08:00" />
+        <meta property="og:article:published_time" content="2017-03-13T16:55:49&#43;08:00" />
         <meta property="og:article:tag" content="前端" />
-        <meta property="og:article:tag" content="组件抽象" />
+        <meta property="og:article:tag" content="微信小程序" />
         
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@" />
         <meta name="twitter:creator" content="@" />
-        <meta name="twitter:title" content="前端业务模型组件抽象集成实践" />
-        <meta name="twitter:description" content="在组件化开发的基础上，对营运后端占业务总量 50% 以上的检索页面模型进行抽象" />
-        <meta name="twitter:url" content="https://fanxmistic.github.io/post/components/" />
+        <meta name="twitter:title" content="小程序体验" />
+        <meta name="twitter:description" content="微信小程序有着可以快捷传播和获取、出色使用体验的特点" />
+        <meta name="twitter:url" content="https://fanxmistic.github.io/post/22222.1/" />
     
 
-        <title> 前端业务模型组件抽象集成实践 &middot;  题歌</title>
+        <title> 小程序体验 &middot;  题歌</title>
 
         <link rel="preload" href="https://fanxmistic.github.io/js/main.js" as="script" />
         <link rel="preload" href="https://fanxmistic.github.io/css/main.css" as="style" />
@@ -37,7 +37,7 @@
         <script>hljs.initHighlightingOnLoad();</script>
 
     
-        <meta name="description" content="在组件化开发的基础上，对营运后端占业务总量 50% 以上的检索页面模型进行抽象" />
+        <meta name="description" content="微信小程序有着可以快捷传播和获取、出色使用体验的特点" />
     
 
     
@@ -56,7 +56,7 @@
     
 
     
-        <link rel="canonical" href="https://fanxmistic.github.io/post/components/" />
+        <link rel="canonical" href="https://fanxmistic.github.io/post/22222.1/" />
 
 
     <script type="application/ld+json">
@@ -65,10 +65,10 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://fanxmistic.github.io/post/components/"
+          "@id": "https://fanxmistic.github.io/post/22222.1/"
         },
-        "headline": "前端业务模型组件抽象集成实践",
-        "description": "在组件化开发的基础上，对营运后端占业务总量 50% 以上的检索页面模型进行抽象",
+        "headline": "小程序体验",
+        "description": "微信小程序有着可以快捷传播和获取、出色使用体验的特点",
         "author": {
             "@type": "Person",
             "name": " ",
@@ -92,16 +92,17 @@
             "width": 80
           }
         },
+        
         "image": {
           "@type": "ImageObject",
-          "url": "https://fanxmistic.github.io/components/header.png",
-          "height": 133,
-          "width": 200
+          "url": "",
+          "height": 80,
+          "width": 80
         },
-        "datePublished": "2017-03-14",
-        "dateModified": "2017-03-14",
-        "wordCount": 356,
-        "keywords": ["前端","组件抽象"] 
+        "datePublished": "2017-03-13",
+        "dateModified": "2017-03-13",
+        "wordCount": 495,
+        "keywords": ["前端","微信小程序"] 
     }
     </script>
 
@@ -183,10 +184,10 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
 
   			<header class="post-header">
   				<span class="post-meta">
-						<span class="post-date">14 Mar 2017</span> <span class="reading-time">| <span class="estimated-reading-time">2 min.</span> (<span class="word-count">356</span> words)</span></span>
+						<span class="post-date">13 Mar 2017</span> <span class="reading-time">| <span class="estimated-reading-time">3 min.</span> (<span class="word-count">495</span> words)</span></span>
   				</span>
   				<div class="clear"></div>
-  				<h1 class="post-title">前端业务模型组件抽象集成实践</h1>
+  				<h1 class="post-title">小程序体验</h1>
   			</header>
 
   			<section class="post-content">
@@ -197,381 +198,392 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        min-height: 400px;
+        height: 400px;
     "
-    data-src="/images/components/header.png"
+    data-src="/mini_program/start_result.png"
     class="blured-image w3-card-8 filter-blur-15"
 >
 </div>
 
-<h3 id="前言">前言</h3>
+<p><a href="https://www.zybuluo.com/mdeditor" title="作业部落旗下 Cmd 在线 Markdown 编辑阅读器">『Cmd 技术渲染的沙箱页面，点击此处编写自己的文档』</a></p>
 
-<p>在组件化开发的基础上，对营运后端占业务总量50%以上的检索页面模型进行抽象，集成了检索模型组件，通过配置生成最终页面，减少了重复劳动，提高了组件复用，同时也提高了开发效率。本文详细介绍模型组件的使用，设计原则和实现方案及后续即将集成的表单模型组件，最终彻底去除重复劳动。</p>
+<h1 id="cmd-markdown-简明语法手册">Cmd Markdown 简明语法手册</h1>
 
-<p>2016年 github 上星最多的 10 个开源项目中，第5名是 React，第6名是 angular.js，这两个都是前端最热的组件化解决方案之一，组件化已经是大势所趋。新品类也紧跟技术大潮步伐，在运营后端和用户端上都使用组件化思想开发。在运营后端上，在组件化方案之前，运营后端绝大部分是用基于 FIS 的解决方案，开发中需要自己编写组件，现在得益于 React 和 React 丰富的组件生态，开源的 React 组件库 antd 基本上能满足我们所有业务开发，组件化解决方案已经展现出他极大优越性，在开发效率上有极大的提升，bug 数也明显下降。组件化带来了生产力的提升</p>
+<p>标签： Cmd-Markdown</p>
 
-<p>就像蒸汽机的发明替代了手工劳动，使人们感到幸福，电气时代替代蒸汽机，使人们得到享受，而人工智能时代用机器替代人类枯燥的劳动，人们变成绝对的主宰；组件化使前端进入电气时代，下一个时代就是用智能去除枯燥重复的劳动。而当前我们在运营后端的开发上确实存在重复劳动。</p>
+<hr />
 
-<p>以几个业务系统为例，以下是我们商超运营后端，生态链仓储和电销系统的界面截图。</p>
+<h3 id="1-斜体和粗体">1. 斜体和粗体</h3>
 
-<!--![商超](/images/components/shop.png)
+<p>使用 * 和 ** 表示斜体和粗体。</p>
 
-![生态链](/images/components/ecochain.png)
+<p>示例：</p>
 
-![电销](/images/components/dianxiao.png)-->
+<p>这是 *斜体*，这是 <strong>粗体</strong>。</p>
 
-<p>可以看到运营后台系统的界面还是很有规律的，其实MIS系统绝大部分界面也就是增删改查。从现在的几个业务来看，增删改查的需求，类似图上的界面保守的说能占到50%。而现在我们还在重复的写着这些页面，重复着代码复制，修改这样的工作。</p>
+<h3 id="2-分级标题">2. 分级标题</h3>
 
-<p>分析系统特征，将通用部分，抽象建模进行集成，工厂式量产替代小手工生产，提高人效，是我们一直要追求的目标。基于现在的组件化方案，集成规模更大的组件，通过配置满足不同的需求，也是可行的。所以设计实现了这样的一个业务组件模型。</p>
+<p>使用 === 表示一级标题，使用 &mdash; 表示二级标题。</p>
 
-<h3 id="业务模型组件分析">业务模型组件分析</h3>
+<p>示例：</p>
 
-<p>页面基本上回包含检索区，操作按钮区，数据表格区，分页区。每一个页面请求不同的服务。检索，分页用户操作都是一样的，可以通用处理。不同的是检索区，操作事件，表格的每一列肯定是不一样的，用户能自行进行配置。还有一个不一样的是请求的服务，需要指定使用的服务地址。</p>
+<pre><code>这是一个一级标题
+============================
 
-<h3 id="业务模型组件设计原则">业务模型组件设计原则</h3>
+这是一个二级标题
+--------------------------------------------------
+
+### 这是一个三级标题
+</code></pre>
+
+<p>你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。</p>
+
+<h3 id="3-外链接">3. 外链接</h3>
+
+<p>使用 [描述](链接地址) 为文字增加外链接。</p>
+
+<p>示例：</p>
+
+<p>这是去往 <a href="http://ghosertblog.github.com">本人博客</a> 的链接。</p>
+
+<h3 id="4-无序列表">4. 无序列表</h3>
+
+<p>使用 *，+，- 表示无序列表。</p>
+
+<p>示例：</p>
+
+<ul>
+<li>无序列表项 一</li>
+<li>无序列表项 二</li>
+<li>无序列表项 三</li>
+</ul>
+
+<h3 id="5-有序列表">5. 有序列表</h3>
+
+<p>使用数字和点表示有序列表。</p>
+
+<p>示例：</p>
 
 <ol>
-<li>约定大于配置。通过一些强制约定简化配置。</li>
-<li>保持配置项简单、一致。这一点很重要，保持简单，使用时就不用参照手册，利于使用和推广，但是配置简单势必会牺牲一下灵活性，我最终还是选择了易用性优先，兼顾一部分的灵活性配置。</li>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
 </ol>
 
-<h3 id="业务模型组件流程图">业务模型组件流程图</h3>
+<h3 id="6-文字引用">6. 文字引用</h3>
 
-<!--![流程图](/images/components/progress.png)-->
+<p>使用 &gt; 表示文字引用。</p>
 
-<p>通过配置过滤项生成页面，通过服务配置指定数据获取方式。使用了业务模型组件之后，只处理自组件的用户交互事件，页面上其他事情就不用管了，比如检索按钮，清空按钮，翻页处理等都由大组件集中处理了。</p>
+<p>示例：</p>
 
-<h3 id="业务模型组件实现">业务模型组件实现</h3>
+<blockquote>
+<p>野火烧不尽，春风吹又生。</p>
+</blockquote>
 
-<p>我使用 Vue 作为基础库，实现了这个模型，最终代码如下：</p>
+<h3 id="7-行内代码块">7. 行内代码块</h3>
 
-<pre><code class="language-javascript">&lt;xp-searchPage ref=&quot;sp&quot; change={this.filterChange}&gt;
-  &lt;xp-filter components={filterComponents}&gt;&lt;/xp-filter&gt;
-  &lt;xp-buttonBar components={buttonComponents}&gt;&lt;/xp-buttonBar&gt;
-  &lt;xp-table components={tableComponents}&gt;&lt;/xp-table&gt;
-&lt;/xp-searchPage&gt;
+<p>使用 `代码` 表示行内代码块。</p>
+
+<p>示例：</p>
+
+<p>让我们聊聊 <code>html</code>。</p>
+
+<h3 id="8-代码块">8.  代码块</h3>
+
+<p>使用 四个缩进空格 表示代码块。</p>
+
+<p>示例：</p>
+
+<pre><code>这是一个代码块，此行左侧有四个不可见的空格。
 </code></pre>
 
-<h4 id="1-组件使用配置">1.组件使用配置</h4>
+<h3 id="9-插入图像">9.  插入图像</h3>
 
-<p>过滤项的配置：</p>
+<p>使用 ![描述](图片链接地址) 插入图像。</p>
 
-<pre><code class="language-javascript">const filterComponents = [
-  {
-    component: 'Input',
-    label: '手机号',
-    name: 'shop_phone',
-    value: utils.getQueryString('phoneNumber')
-  },
-  {
-    component: 'MerchantStatus',
-    label: '商户状态',
-    name: 'shop_status'
-  },
-  .
-  .
-  .
-  {
-    component: 'Button',
-    label: '查询',
-    name: 'submit',
-  },
-  {
-    component: 'Reset',
-    label: '重置',
-    name: 'reset'
+<p>示例：</p>
+
+<p><img src="https://www.zybuluo.com/static/img/my_head.jpg" alt="我的头像" /></p>
+
+<h1 id="cmd-markdown-高阶语法手册">Cmd Markdown 高阶语法手册</h1>
+
+<h3 id="1-内容目录">1. 内容目录</h3>
+
+<p>在段落中填写 <code>[TOC]</code> 以显示全文内容的目录结构。</p>
+
+<p>[TOC]</p>
+
+<h3 id="2-标签分类">2. 标签分类</h3>
+
+<p>在编辑区任意行的列首位置输入以下代码给文稿标签：</p>
+
+<p>标签： 数学 英语 Markdown</p>
+
+<p>或者</p>
+
+<p>Tags： 数学 英语 Markdown</p>
+
+<h3 id="3-删除线">3. 删除线</h3>
+
+<p>使用 ~~ 表示删除线。</p>
+
+<p><del>这是一段错误本。</del></p>
+
+<h3 id="4-注脚">4. 注脚</h3>
+
+<p>使用 [^keyword] 表示注脚。</p>
+
+<p>这是一个注脚<sup class="footnote-ref" id="fnref:footnote"><a rel="footnote" href="#fn:footnote">1</a></sup>的样例。</p>
+
+<p>这是第二个注脚<sup class="footnote-ref" id="fnref:footnote2"><a rel="footnote" href="#fn:footnote2">2</a></sup>的样例。</p>
+
+<h3 id="5-latex-公式">5. LaTeX 公式</h3>
+
+<p>$ 表示行内公式：</p>
+
+<p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。</p>
+
+<p>$$ 表示整行公式：</p>
+
+<p>$$\sum_{i=1}^n a_i=0$$</p>
+
+<p>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$</p>
+
+<p>$$\sum^{j-1}<em>{k=0}{\widehat{\gamma}</em>{kj} z_k}$$</p>
+
+<p>访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax</a> 参考更多使用方法。</p>
+
+<h3 id="6-加强的代码块">6. 加强的代码块</h3>
+
+<p>支持四十一种编程语言的语法高亮的显示，行号显示。</p>
+
+<p>非代码示例：</p>
+
+<pre><code>$ sudo apt-get install vim-gnome
+</code></pre>
+
+<p>Python 示例：</p>
+
+<pre><code class="language-python">requires_authorization
+def somefunc(param1='', param2=0):
+    '''A docstring'''
+    if param1 &gt; param2: # interesting
+        print 'Greater'
+    return (param2 - param1 + 1) or None
+
+class SomeClass:
+    pass
+
+&gt;&gt;&gt; message = '''interpreter
+... prompt'''
+</code></pre>
+
+<p>JavaScript 示例：</p>
+
+<pre><code class="language-javascript">/**
+* nth element in the fibonacci series.
+* @param n &gt;= 0
+* @return the nth element, &gt;= 0.
+*/
+function fib(n) {
+  var a = 1, b = 1;
+  var tmp;
+  while (--n &gt;= 0) {
+    tmp = a;
+    a += b;
+    b = tmp;
   }
-];
-</code></pre>
-
-<p>过滤项配置规范：</p>
-
-<table>
-<thead>
-<tr>
-<th>配置项</th>
-<th>参数类型</th>
-<th>说明</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>component</td>
-<td>String Object （VUE组件）</td>
-<td>组件，可以是字符串或者对象；字符串时会动态加载系统提供的组件；对象时直接使用该自定制的组件</td>
-</tr>
-
-<tr>
-<td>label</td>
-<td>过滤项名称</td>
-<td></td>
-</tr>
-
-<tr>
-<td>name</td>
-<td>提交时该项的字段名称</td>
-<td></td>
-</tr>
-
-<tr>
-<td>value</td>
-<td>默认值</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<p>表格项的配置：</p>
-
-<pre><code class="language-javascript">const tableComponents = [
-  {
-    component: 'Text',
-    label: '序号',
-    name: 'no',
-    width: 40
-  },
-  {
-    component: 'Input',
-    label: '项目编号',
-    name: 'task_no',
-    width: 120,
-    action: this.updateNo
-  },
-  .
-  .
-  .
-  {
-    component: 'Command',
-    label: '操作',
-    name: ['分配', '废弃'],
-    action: [this.dispatch, this.drop],
-    width: 100
-  }
-]
-</code></pre>
-
-<p>表格列配置规范：</p>
-
-<table>
-<thead>
-<tr>
-<th>配置项</th>
-<th>参数类型</th>
-<th>说明</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>component</td>
-<td>String Object （VUE组件）</td>
-<td>组件，可以是字符串或者对象；字符串时会动态加载系统提供的组件；对象时直接使用该自定制的组件</td>
-</tr>
-
-<tr>
-<td>label</td>
-<td>过滤项名称</td>
-<td></td>
-</tr>
-
-<tr>
-<td>name</td>
-<td>提交时该项的字段名称</td>
-<td></td>
-</tr>
-
-<tr>
-<td>width</td>
-<td>表格列宽度</td>
-<td></td>
-</tr>
-
-<tr>
-<td>action</td>
-<td>单元格事件</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<p>服务配置：</p>
-
-<pre><code class="language-javascript">filterChange(params, source) {
-  console.log('source:', source);
-  if (source == 'button' || source == 'pagination') {
-    let pass = true;
-    if (params['shop_phone'] &amp;&amp; !/^1\d{10}$/.test(params['shop_phone'])) {
-      pass = false;
-      this.$alert('请输入正确的手机号');
-      pass = false;
-    }
-    if (!pass) return;
-    return api.getTaskPollList(params);
-  }
-},
-</code></pre>
-
-<p>filterChange 需要返回 ajax 请求的 Promise 对象, 在 filterChange 中可以进行校验。</p>
-
-<h4 id="2-组件交互图">2.组件交互图</h4>
-
-<!--![交互图](/images/components/interaction.png)-->
-
-<p>父组件 xp-searchPage 负责主要的处理逻辑，子组件通过事件与父组件进行交互，父组件将最终数据通过事件通知给 table 组件，最终完成数据的渲染。</p>
-
-<h4 id="3-子组件动态加载及渲染">3.子组件动态加载及渲染</h4>
-
-<p>如果配置的是系统子组件，即 component 为 string 时，需要动态加载该子组件并动态渲染，首先拼出子组件的路径，通过 require 加载，我使用的是 Vue2.0，用 jsx 方式编写组件，利用 render 方法的参数 createElement 动态创建该组件</p>
-
-<pre><code class="language-javascript">render(h) {
-  return (
-    &lt;div class='compo-filter'&gt;
-      &lt;el-form ref=&quot;form&quot; inline={true}&gt;
-        &lt;div class=&quot;filter-area&quot;&gt;
-          {
-            this.componentsData.map((item, index) =&gt; {
-              return h(item.tag, {props: {...item}}, this.$slots.default);
-            })
-          }
-        &lt;/div&gt;
-      &lt;/el-form&gt;
-    &lt;/div&gt;
-  )
+  return a;
 }
+
+document.write(fib(10));
 </code></pre>
 
-<h3 id="子组件规范">子组件规范</h3>
+<h3 id="7-流程图">7. 流程图</h3>
 
-<p>有了框架，我们需要具体实现业务的子组件，只要按照以下规范，所有的组件都能被配置为过滤项或者表格列组件，具体规范如下：</p>
+<h4 id="示例">示例</h4>
 
-<h4 id="1-filter-子组件">1.filter 子组件</h4>
+<pre><code class="language-flow">st=&gt;start: Start:&gt;https://www.zybuluo.com
+io=&gt;inputoutput: verification
+op=&gt;operation: Your Operation
+cond=&gt;condition: Yes or No?
+sub=&gt;subroutine: Your Subroutine
+e=&gt;end
 
-<p>filter 组件 props 规范:</p>
+st-&gt;io-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;sub-&gt;io
+</code></pre>
+
+<h4 id="更多语法参考-流程图语法参考-http-adrai-github-io-flowchart-js">更多语法参考：<a href="http://adrai.github.io/flowchart.js/">流程图语法参考</a></h4>
+
+<h3 id="8-序列图">8. 序列图</h3>
+
+<h4 id="示例-1">示例 1</h4>
+
+<pre><code class="language-seq">Alice-&gt;Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob--&gt;Alice: I am good thanks!
+</code></pre>
+
+<h4 id="示例-2">示例 2</h4>
+
+<pre><code class="language-seq">Title: Here is a title
+A-&gt;B: Normal line
+B--&gt;C: Dashed line
+C-&gt;&gt;D: Open arrow
+D--&gt;&gt;A: Dashed open arrow
+</code></pre>
+
+<h4 id="更多语法参考-序列图语法参考-http-bramp-github-io-js-sequence-diagrams">更多语法参考：<a href="http://bramp.github.io/js-sequence-diagrams/">序列图语法参考</a></h4>
+
+<h3 id="9-表格支持">9. 表格支持</h3>
 
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>required</th>
-<th>备注</th>
+<th>项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>lable</td>
-<td>Stirng</td>
-<td>true</td>
-<td>标签</td>
+<td>计算机</td>
+<td align="right">\$1600</td>
+<td align="center">5</td>
 </tr>
 
 <tr>
-<td>name</td>
-<td>String</td>
-<td>true</td>
-<td>提交数据名称</td>
+<td>手机</td>
+<td align="right">\$12</td>
+<td align="center">12</td>
 </tr>
 
 <tr>
-<td>reset</td>
-<td>Function</td>
-<td>false</td>
-<td>清空操作，让组件清楚用户操作，处于初始状态</td>
-</tr>
-
-<tr>
-<td>value</td>
-<td>Any</td>
-<td>false</td>
-<td>默认值</td>
-</tr>
-
-<tr>
-<td>valueChange</td>
-<td>Function</td>
-<td>true</td>
-<td>将值传递给父组件；this.valueChange(this.name, this.statusModel)；第一个参数：该项ajax请求的key；第二个参数：key对应的值</td>
+<td>管线</td>
+<td align="right">\$1</td>
+<td align="center">234</td>
 </tr>
 </tbody>
 </table>
 
-<p>当过滤项值发生变化时，调用 valueChange，valueChange 可以调用多次，不同的 key 会产生不同的参数，例如，三级联动的省市区选择列表，可以调用三次</p>
+<h3 id="10-定义型列表">10. 定义型列表</h3>
 
-<pre><code class="language-javascript">this.valueChange('shop_province_id', item_id);
-this.valueChange('shop_city_id', item_id);
-this.valueChange('shop_town_id', item_id);
+<dl>
+<dt>名词 1</dt>
+<dd>定义 1（左侧有一个可见的冒号和四个不可见的空格）</dd>
+<dt>代码块 2</dt>
+<dd><p>这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）</p>
+
+<pre><code>代码块（左侧有八个不可见的空格）
+</code></pre></dd>
+</dl>
+
+<h3 id="11-html-标签">11. Html 标签</h3>
+
+<p>本站支持在 Markdown 语法中嵌套 Html 标签，譬如，你可以用 Html 写一个纵跨两行的表格：</p>
+
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th rowspan=&quot;2&quot;&gt;值班人员&lt;/th&gt;
+        &lt;th&gt;星期一&lt;/th&gt;
+        &lt;th&gt;星期二&lt;/th&gt;
+        &lt;th&gt;星期三&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;李强&lt;/td&gt;
+        &lt;td&gt;张明&lt;/td&gt;
+        &lt;td&gt;王平&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
 </code></pre>
 
-<p>系统在加载组件时会自动注入并处理 valueChange，使子组件能和 filter 进行交互，当过滤区清空按钮点击时，调用 reset 实现组件重新初始化。</p>
-
-<h4 id="2-table子组件">2.table子组件</h4>
-
-<p>talbe 列（单元格）组件props规范</p>
-
 <table>
-<thead>
-<tr>
-<th>属性</th>
-<th>类型</th>
-<th>required</th>
-<th>备注</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>name</td>
-<td>String</td>
-<td>true</td>
-<td>对应表格行数据的key</td>
-</tr>
-
-<tr>
-<td>value</td>
-<td>Any</td>
-<td>true</td>
-<td>单元格值</td>
-</tr>
-
-<tr>
-<td>context</td>
-<td>Object</td>
-<td>true</td>
-<td>整行row数据</td>
-</tr>
-
-<tr>
-<td>action</td>
-<td>Function</td>
-<td>false</td>
-<td>单元格事件回调函数</td>
-</tr>
-</tbody>
+    <tr>
+        <th rowspan="2">值班人员</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+    </tr>
+    <tr>
+        <td>李强</td>
+        <td>张明</td>
+        <td>王平</td>
+    </tr>
 </table>
 
-<p>虽然只有4个配置项，但也可以灵活使用，例如系统提供的 Command 列组件，name 是一个数组，只要在编写子组件时，能正确解析属性值，name 属性可以随意传。</p>
+<h3 id="12-内嵌图标">12. 内嵌图标</h3>
 
-<p>通过自定义 filter 组件和 table 组件，能实现任何个性化的定制，在电销系统中实际使用了这套模型组件系统，也很好的满足业务需求。</p>
+<p>本站的图标系统对外开放，在文档中输入</p>
 
-<h3 id="业务模型组件优点">业务模型组件优点</h3>
+<pre><code>&lt;i class=&quot;icon-weibo&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<p>即显示微博的图标： <i class="icon-weibo icon-2x"></i></p>
+
+<p>替换 上述 <code>i 标签</code> 内的 <code>icon-weibo</code> 以显示不同的图标，例如：</p>
+
+<pre><code>&lt;i class=&quot;icon-renren&quot;&gt;&lt;/i&gt;
+</code></pre>
+
+<p>即显示人人的图标： <i class="icon-renren icon-2x"></i></p>
+
+<p>更多的图标和玩法可以参看 <a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/">font-awesome</a> 官方网站。</p>
+
+<h3 id="13-待办事宜-todo-列表">13. 待办事宜 Todo 列表</h3>
+
+<p>使用带有 [ ] 或 [x] （未完成或已完成）项的列表语法撰写一个待办事宜列表，并且支持子列表嵌套以及混用Markdown语法，例如：</p>
+
+<pre><code>- [ ] **Cmd Markdown 开发**
+    - [ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率
+    - [ ] 支持以 PDF 格式导出文稿
+    - [x] 新增Todo列表功能 [语法参考](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments)
+    - [x] 改进 LaTex 功能
+        - [x] 修复 LaTex 公式渲染问题
+        - [x] 新增 LaTex 公式编号功能 [语法参考](http://docs.mathjax.org/en/latest/tex.html#tex-eq-numbers)
+- [ ] **七月旅行准备**
+    - [ ] 准备邮轮上需要携带的物品
+    - [ ] 浏览日本免税店的物品
+    - [x] 购买蓝宝石公主号七月一日的船票
+</code></pre>
+
+<p>对应显示如下待办事宜 Todo 列表：</p>
+
+<ul class="task-list">
+<li><input type="checkbox" disabled class="task-list-item"> <strong>Cmd Markdown 开发</strong>
+
+<ul class="task-list">
+<li><input type="checkbox" disabled class="task-list-item"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
+<li><input type="checkbox" disabled class="task-list-item"> 支持以 PDF 格式导出文稿</li>
+<li><input type="checkbox" checked disabled class="task-list-item"> 新增Todo列表功能 <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">语法参考</a></li>
+<li><input type="checkbox" checked disabled class="task-list-item"> 改进 LaTex 功能
+
+<ul class="task-list">
+<li><input type="checkbox" checked disabled class="task-list-item"> 修复 LaTex 公式渲染问题</li>
+<li><input type="checkbox" checked disabled class="task-list-item"> 新增 LaTex 公式编号功能 <a href="http://docs.mathjax.org/en/latest/tex.html#tex-eq-numbers">语法参考</a></li>
+</ul></li>
+</ul></li>
+<li><input type="checkbox" disabled class="task-list-item"> <strong>七月旅行准备</strong>
+
+<ul class="task-list">
+<li><input type="checkbox" disabled class="task-list-item"> 准备邮轮上需要携带的物品</li>
+<li><input type="checkbox" disabled class="task-list-item"> 浏览日本免税店的物品</li>
+<li><input type="checkbox" checked disabled class="task-list-item"> 购买蓝宝石公主号七月一日的船票</li>
+</ul></li>
+</ul>
+<div class="footnotes">
+
+<hr />
 
 <ol>
-<li>减少开发工作量，让开发者专注于核心业务逻辑的开发</li>
-<li>减少开发时间，提高生产力</li>
-<li>子组件可以复用，随着子组件的积累，更加较少开发量</li>
+<li id="fn:footnote">这是一个 <em>注脚</em> 的 <strong>文本</strong>。
+ <a class="footnote-return" href="#fnref:footnote"><sup>[return]</sup></a></li>
+<li id="fn:footnote2">这是另一个 <em>注脚</em> 的 <strong>文本</strong>。
+ <a class="footnote-return" href="#fnref:footnote2"><sup>[return]</sup></a></li>
 </ol>
-
-<h3 id="适用范围">适用范围</h3>
-
-<p>非常适用于运营后端检索页面及带增删改查等操作的页面。如果页面不是这个逻辑，不推荐强行使用。</p>
-
-<h3 id="后续规划">后续规划</h3>
-
-<p>使用这个模型，在电销系统中已经尝到甜头了，其实还有一个方面，能提高开发效率，那就是表单自动构建，通过配置，自动生成表单，模型组件和表单组件两者结合起来，绝对是运营后台开发的利器。
-表单组件的设计原则和实现方式其实和过滤组件和表格组件是一样的。
-另外，我们将会设计一个共享方案，建设一个组件共享平台，将使用这个模型的过滤组件和表格组件都能展示出来，方便复用。</p>
+</div>
 
   			</section>
 
@@ -581,18 +593,18 @@ this.valueChange('shop_town_id', item_id);
             
                 <a href="https://fanxmistic.github.io/tags/%E5%89%8D%E7%AB%AF/">前端</a>
             
-                <a href="https://fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/">组件抽象</a>
+                <a href="https://fanxmistic.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
             
             
   				</div>
   				<div class="post-share">
-  					<a class="icon-twitter" href="https://twitter.com/share?text=%e5%89%8d%e7%ab%af%e4%b8%9a%e5%8a%a1%e6%a8%a1%e5%9e%8b%e7%bb%84%e4%bb%b6%e6%8a%bd%e8%b1%a1%e9%9b%86%e6%88%90%e5%ae%9e%e8%b7%b5&url=https%3a%2f%2ffanxmistic.github.io%2fpost%2fcomponents%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  					<a class="icon-twitter" href="https://twitter.com/share?text=%e5%b0%8f%e7%a8%8b%e5%ba%8f%e4%bd%93%e9%aa%8c&url=https%3a%2f%2ffanxmistic.github.io%2fpost%2f22222.1%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
   						<span>Twitter</span>
   					</a>
-  					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ffanxmistic.github.io%2fpost%2fcomponents%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ffanxmistic.github.io%2fpost%2f22222.1%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
   						<span>Facebook</span>
   					</a>
-  					<a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2ffanxmistic.github.io%2fpost%2fcomponents%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+  					<a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2ffanxmistic.github.io%2fpost%2f22222.1%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
   						<span>Google+</span>
   					</a>
   				</div>
@@ -609,8 +621,18 @@ this.valueChange('shop_town_id', item_id);
 
 			<nav class="post-nav">
 				
+					<a class="post-nav-item post-nav-next" href="https://fanxmistic.github.io/post/components/">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-left"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">前端业务模型组件抽象集成实践</h4>
+								<p class="post-nav-excerpt">在组件化开发的基础上，对营运后端占业务总量 50% 以上的检索页面模型进行抽象&hellip;</p>
+							</span>
+						</section>
+					</a>
 				
-					<a class="post-nav-item post-nav-prev" href="https://fanxmistic.github.io/post/22222.1/">
+				
+					<a class="post-nav-item post-nav-prev" href="https://fanxmistic.github.io/post/22222/">
 						<section class="post-nav-teaser">
 							<span class="post-nav-icon"><i class="icon-arrow-right"></i></span>
 							<span class="post-nav-info">
@@ -645,28 +667,47 @@ this.valueChange('shop_town_id', item_id);
     <div id="toc" class="menu-list">
         <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#cmd-markdown-简明语法手册">Cmd Markdown 简明语法手册</a>
 <ul>
 <li>
 <ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#业务模型组件分析">业务模型组件分析</a></li>
-<li><a href="#业务模型组件设计原则">业务模型组件设计原则</a></li>
-<li><a href="#业务模型组件流程图">业务模型组件流程图</a></li>
-<li><a href="#业务模型组件实现">业务模型组件实现</a>
-<ul>
-<li><a href="#1-组件使用配置">1.组件使用配置</a></li>
-<li><a href="#2-组件交互图">2.组件交互图</a></li>
-<li><a href="#3-子组件动态加载及渲染">3.子组件动态加载及渲染</a></li>
+<li><a href="#1-斜体和粗体">1. 斜体和粗体</a></li>
+<li><a href="#2-分级标题">2. 分级标题</a></li>
+<li><a href="#3-外链接">3. 外链接</a></li>
+<li><a href="#4-无序列表">4. 无序列表</a></li>
+<li><a href="#5-有序列表">5. 有序列表</a></li>
+<li><a href="#6-文字引用">6. 文字引用</a></li>
+<li><a href="#7-行内代码块">7. 行内代码块</a></li>
+<li><a href="#8-代码块">8.  代码块</a></li>
+<li><a href="#9-插入图像">9.  插入图像</a></li>
 </ul></li>
-<li><a href="#子组件规范">子组件规范</a>
-<ul>
-<li><a href="#1-filter-子组件">1.filter 子组件</a></li>
-<li><a href="#2-table子组件">2.table子组件</a></li>
 </ul></li>
-<li><a href="#业务模型组件优点">业务模型组件优点</a></li>
-<li><a href="#适用范围">适用范围</a></li>
-<li><a href="#后续规划">后续规划</a></li>
+<li><a href="#cmd-markdown-高阶语法手册">Cmd Markdown 高阶语法手册</a>
+<ul>
+<li>
+<ul>
+<li><a href="#1-内容目录">1. 内容目录</a></li>
+<li><a href="#2-标签分类">2. 标签分类</a></li>
+<li><a href="#3-删除线">3. 删除线</a></li>
+<li><a href="#4-注脚">4. 注脚</a></li>
+<li><a href="#5-latex-公式">5. LaTeX 公式</a></li>
+<li><a href="#6-加强的代码块">6. 加强的代码块</a></li>
+<li><a href="#7-流程图">7. 流程图</a>
+<ul>
+<li><a href="#示例">示例</a></li>
+<li><a href="#更多语法参考-流程图语法参考-http-adrai-github-io-flowchart-js">更多语法参考：<a href="http://adrai.github.io/flowchart.js/">流程图语法参考</a></a></li>
+</ul></li>
+<li><a href="#8-序列图">8. 序列图</a>
+<ul>
+<li><a href="#示例-1">示例 1</a></li>
+<li><a href="#示例-2">示例 2</a></li>
+<li><a href="#更多语法参考-序列图语法参考-http-bramp-github-io-js-sequence-diagrams">更多语法参考：<a href="http://bramp.github.io/js-sequence-diagrams/">序列图语法参考</a></a></li>
+</ul></li>
+<li><a href="#9-表格支持">9. 表格支持</a></li>
+<li><a href="#10-定义型列表">10. 定义型列表</a></li>
+<li><a href="#11-html-标签">11. Html 标签</a></li>
+<li><a href="#12-内嵌图标">12. 内嵌图标</a></li>
+<li><a href="#13-待办事宜-todo-列表">13. 待办事宜 Todo 列表</a></li>
 </ul></li>
 </ul></li>
 </ul>
