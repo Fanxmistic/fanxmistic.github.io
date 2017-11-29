@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>组件抽象 on 题歌</title>
-    <link>//fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/index.xml</link>
+    <link>http://fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/index.xml</link>
     <description>Recent content in 组件抽象 on 题歌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="//fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://fanxmistic.github.io/tags/%E7%BB%84%E4%BB%B6%E6%8A%BD%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>前端业务模型组件抽象集成实践</title>
-      <link>//fanxmistic.github.io/post/components/</link>
+      <link>http://fanxmistic.github.io/post/components/</link>
       <pubDate>Tue, 14 Mar 2017 17:11:31 +0800</pubDate>
       
-      <guid>//fanxmistic.github.io/post/components/</guid>
+      <guid>http://fanxmistic.github.io/post/components/</guid>
       <description>
 
 &lt;div
