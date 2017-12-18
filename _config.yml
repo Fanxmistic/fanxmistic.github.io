@@ -1,8 +1,8 @@
 # Site settings 配置站点
-title: '题歌的独立博客'
+title: '题歌'
 description: '很高兴能在这里与你分享我对技术和生活的思考。'
-keyword: '题歌, 题歌的独立博客, 题歌的博客, 前端, 前端开发, 前端博客, javascript, vuejs, nodejs, 设计'
-url: 'http://liaokeyu.com' # your host
+keyword: '题歌, 题歌的独立博客, 题歌的博客, 前端, 前端开发, 前端博客, javascript, vuejs, nodejs, react, 设计'
+url: 'https://fanxmistic.github.io' # your host
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
@@ -25,8 +25,8 @@ search: true
 nightMode: false
 
 # Comments
-disqus: false
-disqus_url: 'https://liaokeyu.disqus.com/embed.js'
+disqus: true
+disqus_url: 'https://tigeblog.disqus.com/embed.js'
 
 # Share
 social-share: true
@@ -40,10 +40,11 @@ postPatterns: 'circuitBoard'
 
 # SNS settings 配置社交网站url: weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  weibo: '//weibo.com/lovecolcol'
-  juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
-  instagram: '//www.instagram.com/steveliaocn'
-  github: '//github.com/kaeyleo'
+  weibo: '//weibo.com/fanxmistic'
+  zhihu: '//www.zhihu.com/people/fanxmistic'
+  medium: '//medium.com/@qjx0602'
+  instagram: '//www.instagram.com/fanxmistic'
+  github: '//github.com/Fanxmistic'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
@@ -63,4 +64,4 @@ kramdown:
 RSS: false
 
 # Plugins
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
