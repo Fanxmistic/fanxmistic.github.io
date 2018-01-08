@@ -120,13 +120,22 @@ this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL va
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 */
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-/*写入自己的disqus信息*/
-s.src = '{{ site.disqus_url }}';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+// (function() { // DON'T EDIT BELOW THIS LINE
+// var d = document, s = d.createElement('script');
+// /*写入自己的disqus信息*/
+// s.src = '{{ site.disqus_url }}';
+// s.setAttribute('data-timestamp', +new Date());
+// (d.head || d.body).appendChild(s);
+// })();
+var gitalk = new Gitalk({
+  clientID: '2b6c20be8689404370eb',
+  clientSecret: '712192cd313d962c3b80e4a9007a82c11a20b06f',
+  repo: 'https://github.com/Fanxmistic/fanxmistic.github.io.git',
+  owner: 'Fanxmistic',
+  admin: ['Fanxmistic'],
+})
+
+gitalk.render('gitalk-container')
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
