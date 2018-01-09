@@ -21,15 +21,28 @@ layout: default
         </li>
         {% for tag in site.tags %}
         <li>
-            <span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}」</span>
+            <span class="tag-name" id="{{ tag[0] }}">{{ tag[0] }}</span>
             {% for post in tag[1] %}
             <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             {% endfor %}
         </li>
-        
+
         </div>
         {% endfor%}
     </ul>
 </main>
-    
+<script>
+  const taglist = document.querySelector('.tags-list')
+  const tags = taglist.querySelectorAll('.tag')
+  const colors = ['#a5d4ee', '#dbcbda', '#e4c5c0', '#aeb6c8', '#d49d85']
+  const length = colors.length
+
+  for (let i = 0; i < tags.length; i++) {
+    const index = i % length
+    const el = document.querySelector('#' + tags[i].innerText)
+    el.style.backgroundColor = colors[index]
+    tags[i].style.backgroundColor = colors[index]
+  }
+</script>
+
 {% include footer.html %}
