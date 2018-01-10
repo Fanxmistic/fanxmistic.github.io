@@ -230,6 +230,7 @@ a {
 }
 
 .article-list {
+  position: relative;
 	float: left;
 	width: 695px
 }
@@ -237,13 +238,16 @@ a {
 .article-list .article-item {
   position: relative;
 	width: 100%;
-	margin-bottom: 16px;
 	padding: 30px 20px;
 	background-color: #fff;
-	border: 1px solid #e7eaf1;
+	border-bottom: 1px solid #e7eaf1;
 	border-radius: 3px;
 	box-sizing: border-box;
 	box-shadow: 0 1px 3px rgba(0,37,55,.06)
+}
+
+.article-list .article-item:hover {
+  background-color: #FCFCFC;
 }
 
 .article-list .article-item:last-child {
@@ -445,13 +449,12 @@ a {
 	display: inline-block;
 	width: auto;
 	font-size: 14px;
-	color: #a6abb2;
+	color: #fff;
 	font-family: -apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	line-height: 22px;
 	box-sizing: border-box;
-	box-shadow: 0 0 .6px #d5dae1;
-	border-radius: 2px;
-	background-color: #fafafa;
+  border-radius: 12px;
+  padding: 4px 10px;
 	cursor: pointer;
 	margin-right: 2px;
 	transition: .2s
@@ -462,7 +465,7 @@ a {
 }
 
 .article-item .post-meta .post-tag:hover,.tags-card .tag:hover,.tags-content .tag:hover {
-	color: #83888f
+	color: #1fa19e
 }
 
 .g-sidebar-wrapper {
@@ -499,7 +502,6 @@ a {
 
 .search-card {
 	position: relative;
-	margin-top: 16px;
 	padding: 0
 }
 
@@ -509,13 +511,13 @@ a {
 }
 
 .search-card input {
+  position: absolute;
 	padding: 30px 20px;
 	background-color: #fff;
 	border: 1px solid #e7eaf1;
 	border-radius: 3px;
 	box-sizing: border-box;
 	box-shadow: 0 1px 3px rgba(0,37,55,.06);
-	position: relative;
 	padding: 12px 46px 12px 18px;
 	margin: 0;
 	width: 100%;
@@ -547,13 +549,14 @@ a {
 }
 
 .search-card .search_result {
-	position: relative;
-	margin-top: -2px;
+	position: absolute;
+  top: 50px;
+  width: 100%;
 	max-height: 230px;
 	background-color: #fff;
 	border-radius: 0 0 4px 4px;
 	overflow: scroll;
-	z-index: 0
+	z-index: 99
 }
 
 .search-card .search_item {
@@ -906,7 +909,8 @@ a {
 
 .read-next-item {
 	position: relative;
-	padding: 20px;
+  padding: 20px;
+  width: 50%;
 	top: 0;
   border-radius: 3px;
   border: 1px solid #DDDDDD;
@@ -1252,7 +1256,8 @@ a {
 
 	.article-list {
 		float: none;
-		margin: 0 auto
+    margin: 0 auto;
+    margin-top: -60px;
 	}
 
 	.g-sidebar,.search-card {

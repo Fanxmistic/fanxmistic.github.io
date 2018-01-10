@@ -18,13 +18,21 @@ header-img: assets/img/hero1.jpg
 
 <main class="g-container home-content">
     <div class="article-list">
+        {% if site.search %}
+                <div class="search-card">
+                    <input id="search_input" type="text" placeholder="Search...">
+                    <i class="iconfont icon-search"></i>
+                    <div class="search_result"></div>
+                </div>
+                {% endif %}
+              <br /><br /><br /><br />
         {% for post in paginator.posts %}
             <article class="article-item">
                 {% if post.cover %}
-                <div class="post-cover">
+                <!-- <div class="post-cover">
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
                     <img src="{{ post.cover }}" alt="">
-                </div>
+                </div> -->
                 {% endif %}
                 <section class="post-preview">
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
@@ -89,17 +97,27 @@ header-img: assets/img/hero1.jpg
             </section>
             {% endif %}
         </div>
-
-        {% if site.search %}
-        <div class="search-card">
-            <input id="search_input" type="text" placeholder="Search...">
-            <i class="iconfont icon-search"></i>
-            <div class="search_result"></div>
-        </div>
-        {% endif %}
-
     </aside>
 
 </main>
+<script>
+  const tags = document.querySelectorAll('.post-tag')
+  const tags2 = document.querySelectorAll('.tag')
+  const colors = ['#857DEA', '#FF955B', '#56C4E1', '#E8596B', '#42C67D', '#a5d4ee', '#dbcbda', '#e4c5c0', '#aeb6c8', '#d49d85']
+  const length = colors.length
+  const obj = {}
+
+  for (let i = 0; i < tags.length; i++) {
+    const index = i % length
+    const key = tags[i].innerText
+
+    tags[i].style.backgroundColor = obj[key] || colors[index]
+    if (!obj[key]) obj[key] = colors[index]
+  }
+  for (let i = 0; i < tags2.length; i++) {
+    const key = tags[i].innerText
+    tags2[i].style.backgroundColor = obj[key]
+  }
+</script>
 
 {% include footer.html %}
