@@ -41,7 +41,7 @@ header-img: assets/img/hero1.jpg
                     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
                     {% endif %}
                     {% if post.subtitle.size==0 or post.subtitle==nil %}
-                    <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 100}}</p>
                     {% endif %}
                 </section>
                 <footer class="post-meta">
