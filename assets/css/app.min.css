@@ -21,7 +21,7 @@ body {
 	font-family: -apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	color: #656565;
 	-webkit-font-smoothing: antialiased;
-	background-color: #f7f8fa
+	background-color: #F4F5F5
 }
 
 ul {
@@ -238,7 +238,7 @@ a {
 .article-list .article-item {
   position: relative;
 	width: 100%;
-	padding: 30px 20px;
+	padding: 20px;
 	background-color: #fff;
 	border-bottom: 1px solid #e7eaf1;
 	border-radius: 3px;
@@ -281,29 +281,28 @@ a {
 
 .article-list .article-item .post-preview .post-title {
 	font-family: Merriweather,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
-	color: #4e4e4e;
-	font-size: 24px;
-	line-height: 32px
+	color: #2e3135;
+	font-size: 1.2rem;
+  font-weight: 600
 }
 
 .article-list .article-item .post-preview .post-subtitle {
-	margin-top: 3px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	color: #b8bdc3;
 	line-height: 26px
 }
 
 .article-list .article-item .post-preview .post-excerpt {
-	margin-top: 8px;
+	/* margin-top: 8px; */
 	font-size: 16px;
-	font-family: Merriweather-Light,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	color: #b8bdc3;
 	line-height: 26px
 }
 
 .article-list .article-item .post-meta {
 	height: 22px;
-	margin-top: 16px
+	margin-top: 6px
 }
 
 .article-list .article-item .post-meta .post-tags {
@@ -315,7 +314,7 @@ a {
 	float: right;
 	color: #a9b0bc;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 12px;
 	letter-spacing: .6px;
 	line-height: 22px
 }
@@ -448,13 +447,13 @@ a {
 .article-item .post-meta .post-tag,.tags-card .tag,.tags-content .tag {
 	display: inline-block;
 	width: auto;
-	font-size: 14px;
+	font-size: 12px;
 	color: #fff;
 	font-family: -apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	line-height: 22px;
 	box-sizing: border-box;
   border-radius: 12px;
-  padding: 4px 10px;
+  padding: 2px 8px;
 	cursor: pointer;
 	margin-right: 2px;
 	transition: .2s
@@ -1257,7 +1256,7 @@ a {
 	.article-list {
 		float: none;
     margin: 0 auto;
-    margin-top: -60px;
+    margin-top: -100px;
 	}
 
 	.g-sidebar,.search-card {

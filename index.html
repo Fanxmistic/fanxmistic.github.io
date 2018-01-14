@@ -29,10 +29,10 @@ header-img: assets/img/hero1.jpg
         {% for post in paginator.posts %}
             <article class="article-item">
                 {% if post.cover %}
-                <!-- <div class="post-cover">
+                <div class="post-cover">
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
                     <img src="{{ post.cover }}" alt="">
-                </div> -->
+                </div>
                 {% endif %}
                 <section class="post-preview">
                     <a class="post-link" href="{{ post.url }}" title="{{ post.title }}"></a>
