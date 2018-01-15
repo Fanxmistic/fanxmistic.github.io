@@ -120,7 +120,7 @@ a {
 .g-header .g-nav>ul>li>a {
 	display: inline-block;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
 	letter-spacing: 1px;
   /* color: #4e4e4e !important; */
 	padding: 0 12px;
@@ -1326,7 +1326,7 @@ a {
 		display: block;
 		padding: 16px 0;
 		font-size: 16px;
-		font-weight: 700;
+		font-weight: 500;
 		color: #a5a8b0;
 		opacity: 1
 	}
@@ -1416,6 +1416,11 @@ a {
 }
 
 @media screen and (max-width:500px) {
+  .article-list .article-item .post-preview {
+    padding-right: 0;
+    padding-top: 18px;
+  }
+
 	.home-banner {
 		height: 400px
 	}
@@ -1455,7 +1460,12 @@ a {
 	}
 
 	.article-list .article-item .post-cover {
-		max-height: 200px
+    max-height: 200px;
+    position: relative;
+    top: -4px;
+    left: 0;
+    width: auto;
+    transform: translateY(0);
 	}
 
 	.article-list .article-item .post-preview .post-title {
