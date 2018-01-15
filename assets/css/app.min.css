@@ -180,7 +180,7 @@ a {
 
 .home-banner h3 {
 	font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
   color: #4e4e4e;
 	letter-spacing: 10px;
 	margin-top: 8px
@@ -638,19 +638,19 @@ a {
 
 .pagination #page-link-container {
 	display: inline-block;
-	float: left
+	float: left;
 }
 
 .g-footer {
-	min-height: 40px;
-	padding: 20px 0;
+  height: 60px;
+  line-height: 60px;
 	border-top: 1px solid #e7eaf1;
 	text-align: center
 }
 
 .g-footer section {
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 60px;
 	color: #a6abb2
 }
 
@@ -1035,6 +1035,7 @@ a {
 
 .tags-list li .tag {
   display: inline-block;
+  margin-bottom: 10px;
   padding: 6px 12px;
   color: #fff;
   border-radius: 16px;
