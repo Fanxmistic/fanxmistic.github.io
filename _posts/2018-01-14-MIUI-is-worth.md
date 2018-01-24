@@ -3,7 +3,7 @@ layout: post
 title: '『知乎回答』MIUI主题制作赚钱吗'
 date: 2018-01-15
 categories: zhihu
-cover: 'http://static01.coloros.com/bbs/data/attachment/forum/201604/24/201358eewezpaawabd22we.jpg.thumb.jpg'
+cover: '/assets/img/miui.jpg'
 tags: 知乎 回答
 ---
 
