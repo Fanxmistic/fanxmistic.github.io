@@ -4,7 +4,7 @@ title: '『知乎回答』MIUI主题制作赚钱吗'
 date: 2018-01-15
 categories: zhihu
 cover: '/assets/img/miui.jpg'
-tags: 知乎 回答
+tags: 知乎
 ---
 
 > 这是一篇在知乎上的回答，本篇也只是做个粘贴复制，如果你对原文或评论感兴趣，请点击 [原文地址](https://www.zhihu.com/question/21092387/answer/37858855) 。
