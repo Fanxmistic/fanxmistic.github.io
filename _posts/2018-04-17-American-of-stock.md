@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '美股日记'
+title: '美股日记之初出茅庐'
 date: 2018-04-17
 categories: stock
 cover: '/assets/img/wall-street.jpg'
