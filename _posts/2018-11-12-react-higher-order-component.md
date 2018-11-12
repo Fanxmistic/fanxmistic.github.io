@@ -3,11 +3,9 @@ layout: post
 title: "React 高阶组件"
 date: 2018-11-12
 categories: React
-cover: "/assets/img/react-high.jpg"
+cover: "/assets/img/react-high.png"
 tags: React JavaScript 前端
 ---
-
-# React 高阶组件
 
 > 开始之前，有两点需要我们注意一下：1、React 高阶组件 仅仅是一种模式，并不是 React 的基础重要知识；2、它不是开发 React app 的必要知识。你可以略过此文章，任然可以开发 React app。然而，就像其他事物一样，你对其越熟悉，才会有更好的收获。如果你写 React app，不掌握它将成为你的遗憾。
 
