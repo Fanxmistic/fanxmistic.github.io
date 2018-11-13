@@ -3,17 +3,19 @@ layout: post
 title: "React 高阶组件"
 date: 2018-11-12
 categories: React
-cover: "/assets/img/react-high.png"
+cover: "/assets/img/react-high.jpg"
 tags: React JavaScript 前端
 ---
 
+# React 高阶组件
+
 > 开始之前，有两点需要我们注意一下：1、React 高阶组件 仅仅是一种模式，并不是 React 的基础重要知识；2、它不是开发 React app 的必要知识。你可以略过此文章，任然可以开发 React app。然而，就像其他事物一样，你对其越熟悉，才会有更好的收获。如果你写 React app，不掌握它将成为你的遗憾。
+
+### 一、为什么需要高阶组件
 
 如果你不知道 `Don't Repeat Yourself` 或 `D.R.Y`，那么在软件开发中必定走不太远。对于大多数开发者来说，它是一个值得长期努力的目标。在这篇文章当中，我们将了解到如何在 React 当中运用 `DRY` 原则 —— 高阶组件。开始阐述之前，我们先来认识一下问题所在。
 
 假设我们要开发类似 `Stripe` 的主页面。正如大多的项目一样，我们先按部就班地开发着。当开发到差不多的时候，你会发现主页面上有很多当鼠标悬浮在某个元素上时出现 `tooltip` 的场景。
-
-![图片](/assets/img/tool-tips.gif)
 
 有很多种方法做到这样。你可能想到写一个带悬浮状态的组件来控制 `tooltip` 的显示与否。那么你需要添加三个组件——Info, TrendChart 和 DailyChart。
 
@@ -109,6 +111,8 @@ class DailyChart extends React.Component {
 
 以上，问题就显而易见了。当一个新组件需要类似 hover 逻辑 时，我们应避免重复代码。那么，我们该如何解决呢？为了便于理解，先来了解一下编程当中的两个概念——回调 和 高阶函数。
 
+### 二、什么是回调和高阶函数
+
 在 JavaScript 当中，函数时第一公民。也就是说它可以像 objects/arrays/strings 被赋值给变量、被当作参数传递给函数和被函数返回。
 
 ```javascript
@@ -150,6 +154,8 @@ _.filter([1, 2, 3, 4], n => n % 2 === 0);
 
 $("#btn").on("click", () => console.log("Callbacks are everywhere"));
 ```
+
+三、高阶函数的简单应用
 
 回到之前写的那个例子。我们不仅需要 `addFive`，可能还需 `addTen` `addTwenty`等等。依照现在的写法，当我们写一个新函数的时候，不得不重复原有逻辑。
 
@@ -200,6 +206,8 @@ addTwenty(10); // 30
 完美，现在我们想要多少 `adder函数` 就能写多少，并且没必要写那么多重复代码。
 
 > 如果你注意到，这种使用一个函数并将其应用一个或多个参数，但不是全部参数，在这个过程中创建并返回一个新函数叫『偏函数应用』。 JavaScript 当中的 `.bind`便是这种方法的一个例子。
+
+### 高阶组件
 
 但是，这些和我们最初写 React 代码重复又有什么关系呢？也像创建 `高阶函数makeAdder` 一样地创建类似 `高阶组件` 。看起来还不错，我们试试吧。
 
