@@ -7,8 +7,6 @@ cover: "/assets/img/react-high.jpg"
 tags: React JavaScript 前端
 ---
 
-# React 高阶组件
-
 > 开始之前，有两点需要说明一下：1、React 高阶组件 仅仅是一种模式，并不是 React 的基础知识；2、它不是开发 React app 的必要知识。你可以略过此文章，仍然可以开发 React app。然而，技多不压身，如果你也是一位 React 开发者，强烈建议你掌握它。
 
 ### 一、为什么需要高阶组件
