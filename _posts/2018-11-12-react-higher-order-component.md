@@ -15,6 +15,8 @@ tags: React JavaScript 前端
 
 假设我们要开发类似下图的功能。正如大多的项目一样，我们先按流程开发着。当开发到差不多的时候，你会发现页面上有很多，鼠标悬浮在某个元素上出现 `tooltip` 的场景。
 
+![图片](/assets/img/tool-tips.gif)
+
 有很多种方法做到这样。你可能想到写一个带悬浮状态的组件来控制 `tooltip` 的显示与否。那么你需要添加三个组件——Info, TrendChart 和 DailyChart。
 
 我们从 Info 组件开始。它很简单，仅仅是一个 `SVG icon`.
