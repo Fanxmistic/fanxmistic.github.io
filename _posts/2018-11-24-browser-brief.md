@@ -13,7 +13,7 @@ tags: 浏览器
 
 提到浏览器，就不得不提 [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee), 他是 [W3C 组织]([World Wide Web Consortium - Wikipedia](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)) 的理事，并在 1990 年左右发明了 `WorldWideWeb浏览器`，后来为了避免和 [World Wide Web]([World Wide Web - Wikipedia](https://en.wikipedia.org/wiki/World_Wide_Web)) 命名冲突而改叫 `Nexus`。这时浏览器的功能很简单，只支持文本、简单的样式表和有限格式的图片和声音。所以，那时的网页也很简单，承载的信息大多以文本为主。
 
-[image:8081F2DE-C91F-424B-B735-7BD8DA0C14D4-1988-00005F72111D8F36/600px-WorldWideWeb_FSF_GNU.png]
+![图片](/assets/img/nexus.png)
 
 ### 二、第一次浏览器大战
 
@@ -57,4 +57,4 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like 
 
 ### 第五、结尾
 
-写这篇文章的初衷是对各家浏览器及其内核的迷惑，就想把它们的来龙去脉理清楚。希望它能对你有些帮助，如果你发现有不正确的地方，欢迎指正。
+写这篇文章的初衷是对各家浏览器及其内核的迷惑，就想把它们的来龙去脉理清楚。希望它能对你有些帮助，如果发现有不正确的地方，欢迎指正。
